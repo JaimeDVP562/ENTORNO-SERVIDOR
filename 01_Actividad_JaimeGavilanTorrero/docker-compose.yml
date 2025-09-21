@@ -8,17 +8,16 @@ services:
       - ./www:/var/www/html
     depends_on:
       - db
-    # Habilitar módulos típicos de XAMPP (rewrite) en el arranque
     command: /bin/sh -c "docker-php-ext-install mysqli && a2enmod rewrite && apache2-foreground"
 
   db:
-    image: mariadb:11
+    image: mysql:8.3
     container_name: db
     environment:
-      - MARIADB_ROOT_PASSWORD=root
-      - MARIADB_DATABASE=app
-      - MARIADB_USER=app
-      - MARIADB_PASSWORD=app
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=app
     volumes:
       - db_data:/var/lib/mysql
     ports:
