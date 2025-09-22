@@ -13,7 +13,7 @@
     $numero = "123" ;
     $numero2 = "456";
     $suerte = "true";
-    $sinValor = "";
+    $sinValor = " ";
     echo "<br>";
     echo $suerte;
     echo $sinValor;
