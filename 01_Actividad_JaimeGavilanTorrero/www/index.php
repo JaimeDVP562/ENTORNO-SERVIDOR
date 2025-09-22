@@ -9,6 +9,19 @@
     <?php
     echo ;
     "<h1>Hola mundo</h1>"
-    ?>
+    $nombre "Jaime";
+    $nombreCompleto "Jaime GAvilan Torrero";
+    $numero "123";
+    $numero2 "456";
+    $suerte "true";
+    $sinValor ;
+    echo "<br>"
+    echo $suerte;
+    echo $sinValor;
+
++
+?>
+
+    
 </body>
 </html>
