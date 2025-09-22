@@ -21,7 +21,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     ports:
-      - "3307:3306"        # 3307 en tu máquina → 3306 en el contenedor
+      - "3307:3306"        
 
   phpmyadmin:
     image: phpmyadmin:5
