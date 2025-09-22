@@ -13,11 +13,17 @@
     $numero = "123" ;
     $numero2 = "456";
     $suerte = "true";
-    $sinValor ;
+    $sinValor = "";
     echo "<br>";
     echo $suerte;
     echo $sinValor;
 
+    echo "Tu IP es: " . $_SERVER['REMOTE_ADDR'] . "<br>";
+    echo "Servidor: " . $_SERVER['SERVER_NAME'] . "<br>";
+    echo "Software del servidor :" . $_SERVER['SERVER_SOFTWARE'] . "<br>";
+    echo "Ruta del script :" . $_SERVER['SERVER_FILENAME'] . "<br>";
+    echo "User Agent: " . $_SERVER['HTTP_USER__AGENT'] . "<br>";
+    echo phpversion();
 ?>
 
     
