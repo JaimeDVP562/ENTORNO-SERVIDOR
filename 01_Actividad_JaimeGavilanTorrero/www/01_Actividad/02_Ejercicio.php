@@ -42,7 +42,7 @@
     // Comilla simple
     echo 'Esto es una comilla simple \'';
     echo "<br>";
-    // Comilla doble 
+    // Comilla  
     echo "Esto es una comilla doble \"";
     echo "<br>";
 
