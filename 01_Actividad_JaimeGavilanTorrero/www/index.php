@@ -8,9 +8,8 @@
 <body>
     <?php
 
-    $nombre = "Jaime";
-    echo "Pagina web de " . $nombre . "<br>";
-
+    $accion = random_int(1,10) < 5 ? 'cantar' : 'bailar';
+    echo 'Ahora tienes que ' .$accion;
 ?>
  
 </body>
