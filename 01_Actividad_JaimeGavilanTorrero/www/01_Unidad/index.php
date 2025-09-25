@@ -17,7 +17,7 @@
     echo "<br>";
     echo $suerte;
     echo $sinValor;
-
+    echo "Pagina web de " . $nombre . "<br>";
     echo "Tu IP es: " . $_SERVER['REMOTE_ADDR'] . "<br>";
     echo "Servidor: " . $_SERVER['SERVER_NAME'] . "<br>";
     echo "Software del servidor : " . $_SERVER['SERVER_SOFTWARE'] . "<br>";

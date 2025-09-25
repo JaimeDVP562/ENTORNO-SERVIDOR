@@ -8,16 +8,10 @@
 <body>
     <?php
 
-    $M_Pi;
-
-    echo $M_Pi;
-
+    $nombre = "Jaime";
+    echo "Pagina web de " . $nombre . "<br>";
 
 ?>
-
-
-
-
-    
+ 
 </body>
 </html>
