@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,12 @@
 
 <body>
     <?php
-    // Generar número aleatorio entre 0 y 100
+    // Generar número aleatorio entre 0 y 5
     $ramdonNumber = rand(0, 5);
-    
+
+    // IMPORTANTE la ruta de la imagen tenenos que ponerla relativa no absoluta si no no sale 
     ?>
-    <img src = "/01_Actividad_JaimeGavilanTorrero/www/02_Unidad/img/svg."> </img>
+    <img src="img/<?php echo $ramdonNumber; ?>.svg" />
 </body>
 
 </html>
