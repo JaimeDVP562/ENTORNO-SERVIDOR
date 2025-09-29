@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<?php
+/*
+---
+title: Unidad 2:  Actividad_2.3
+desc:  Operador ternario y nave espacial
+tags: [PHP, basico]
+---
+*/
+?>
 
 <body>
     <?php
     $numero = 5;
-/*
+    /*
     Una vez le asignemos el valor a la variable comprobamos que sea el valor positivo, si es así elige "Positivo" 
     --> Si el valor de $numero no es positivo, salta la siguiente condicion que a su vez contiene otra comparacion
     --> y la segunda condicion evalúa si el valor es negativo ( imprimer "Negativo") y si no imprime la opcion de "Cero" 

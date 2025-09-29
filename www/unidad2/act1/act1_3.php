@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<?php
+/*
+---
+title: Unidad 2:  Actividad_1.3
+desc:  Crear una tabla
+tags: [PHP, basico]
+---
+*/
+?>
 <body>
     <?php
 

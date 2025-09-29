@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<?php
+/*
+---
+title: Unidad 2:  Actividad_1.5
+desc:  Mostrar dos dados y los suma
+tags: [PHP, basico]
+---
+*/
+?>
 <body>
     <style>
         body {

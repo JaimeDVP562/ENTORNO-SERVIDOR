@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<?php
+/*
+---
+title: Unidad 2:  Actividad_2.6
+desc:  Declarar variables, cambio de tipo de variables, operadores var_dump, settype
+tags: [PHP, basico]
+---
+*/
+?>
 <body>
     <?php
     // Declaramos las variables apartado A

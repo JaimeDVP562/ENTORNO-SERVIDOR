@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<?php
+/*
+---
+title: Unidad 2:  Actividad_1.4
+desc:  Nivel numero ramdon
+tags: [PHP, basico]
+---
+*/
+?>
 <body>
     <style>
         body {

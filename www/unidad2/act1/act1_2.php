@@ -12,7 +12,15 @@
         }
     </style>
 </head>
-
+<?php
+/*
+---
+title: Unidad 2:  Actividad_1.2
+desc:  Media de dos numeros ramdon
+tags: [PHP, basico]
+---
+*/
+?>
 <body>
     <!--Generamos dos números aleatorios y se los introducimos a dos variables con las 
     cuales luego obtendremos la media-->

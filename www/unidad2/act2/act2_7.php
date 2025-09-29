@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<?php
+/*
+---
+title: Unidad 2:  Actividad_2.7
+desc:  Pedimos datos de un objeto
+tags: [PHP, basico]
+---
+*/
+?>
 <body>
     <?php
     // Simulamos que el valor puede venir de un formulario o fuente externa

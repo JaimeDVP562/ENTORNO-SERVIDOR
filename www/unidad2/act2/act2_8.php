@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<?php
+/*
+---
+title: Unidad 2:  Actividad_2.8
+desc:  Nave espacial
+tags: [PHP, basico]
+---
+*/
+?>
 <body>
     <?php
     // Declaramos las variables
