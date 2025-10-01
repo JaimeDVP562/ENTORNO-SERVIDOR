@@ -37,6 +37,6 @@ tags: [PHP, basico]
     <li><?php echo ("$numero1") ;?></li>
 
 
-</body><script type="module" src=""></script>
+</body>
 
 </html>
