@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_2.8
-desc:  Nave espacial
+title: Unidad 2:  Actividad_3_3
+desc:  Sentencia match
 tags: [PHP, basico]
 ---
 */
@@ -24,30 +24,18 @@ tags: [PHP, basico]
 
 <body>
     <?php
-    // Declaramos las variables
-    $nota = rand(1, 3);
+    // Declaramos la variable que vamos a utilizar
+    $numero =rand(1,100);
+    $mensaje = "";
 
-    $resultado = "";
-
-    // Para mostrar el mensaje tendremos que utilizar un if-else
-    if ($nota >= 0 && $nota < 5) {
-        $resultado = "Insuficiente";
-    } elseif ($nota >= 5 && $nota <= 6) {
-        $resultado = "Suficiente";
-    } elseif ($nota >= 7 && $nota <= 8){
-        $resultado = "Notable";
-    } else {
-        $resultado = "Sobresaliente";
+    // Le asiganmos valor a la variable con la sentencia match
+    $mensaje = match ($numero) {
+        1 => ' y en castellano es 1',
+        2 => ' y en castellano es 2',
+        3 => ' y en castellano es 3',
     }
 
     ?>
-    <div>
-        <ul>Simulación de Calificación.</ul>
-        <ul>La nota generada es : <?php echo ($nota) ?></ul>
-        <ul>Calificación : <?php echo ($resultado) ?></ul>
-    </div>
-
-
 </body>
 
 </html>
