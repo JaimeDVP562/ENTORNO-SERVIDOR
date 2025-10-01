@@ -25,7 +25,7 @@ tags: [PHP, basico]
 <body>
     <?php
     // Declaramos las variables
-    $nota = rand(1, 10);
+    $nota = rand(1, 3);
 
     $resultado = "";
 

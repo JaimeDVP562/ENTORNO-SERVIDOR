@@ -9,8 +9,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_2.8
-desc:  Nave espacial
+title: Unidad 2:  Actividad_3.2
+desc:  Notas de clase
 tags: [PHP, basico]
 ---
 */
