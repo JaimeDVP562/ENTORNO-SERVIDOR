@@ -9,8 +9,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_2.8
-desc:  Nave espacial
+title: Unidad 2:  Actividad_3_1
+desc:  Comparar numeros ramdon y decir cual es mayor
 tags: [PHP, basico]
 ---
 */
@@ -24,9 +24,9 @@ tags: [PHP, basico]
 <body>
     <?php
     // Declaramos las variables
-    $numero1 = rand(1, 100);
-    $numero2 = rand(1, 100);
-    $numero3 = rand(1, 100);
+    $numero1 = rand();
+    $numero2 = rand();
+    $numero3 = rand();
 
     // Para mostrar el mensaje tendremos que utilizar un if-else
     if (($numero1 > ($numero2 && $numero3))) {
@@ -37,15 +37,11 @@ tags: [PHP, basico]
         echo ("El numero mayor es $numero3");
     }
     ?>
-    <div>
-        <ul>Juego: Mayor de tres números</ul>
-        <ul>Número 1 :<?php echo ($numero1) ?></ul>
-        <ul>Número 2 :<?php echo ($numero2) ?></ul>
-        <ul>Número 3: <?php echo ($numero3) ?></ul>
-        <ul>El número mayor es: <?php echo ("$numero1") ?></ul>
-    </div>
+
+    <ul>Juego: Mayor de tres números</ul>
+    <li><?php echo ("$numero1") ;?></li>
 
 
-</body>
+</body><script type="module" src=""></script>
 
-</html>
+</html> 
