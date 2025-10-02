@@ -25,22 +25,17 @@ tags: [PHP, basico]
 <body>
     <?php
     // Declaramos la variable que vamos a utilizar
-    $numero = rand(1, 3);
+    $numero =rand(1,100);
     $mensaje = "";
 
-    // Para rellenar el valor de la variable mensaje utilizamos la sentencia match
-
+    // Le asiganmos valor a la variable con la sentencia match
     $mensaje = match ($numero) {
         1 => ' y en castellano es 1',
         2 => ' y en castellano es 2',
         3 => ' y en castellano es 3',
     }
+
     ?>
-
-    <div>
-        <p>El numero generado es: <?php echo $numero . $mensaje ?></p>
-
-    </div>
 </body>
 
 </html>
