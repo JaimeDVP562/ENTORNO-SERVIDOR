@@ -24,17 +24,15 @@ tags: [PHP, basico]
 
 <body>
     <div>
-        <p>Números pares del 0 al 50</p>
+        <p>Suma de números del 1 al 10.</p>
 
         <?php
         // Declaramos las variables 
         $numero = 0;
-        $mensaje = 0;
+        $suma = 0;
 
-        while ($numero <= 50) {
-            if ($numero % 2 == 0) {
-                echo "<ul>$numero</ul>";
-            }
+        while ($numero <= 10) {
+
             $numero++;
         }
 
