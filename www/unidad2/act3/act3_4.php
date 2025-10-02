@@ -9,8 +9,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_3_3
-desc:  Sentencia match
+title: Unidad 2:  Actividad_3_4
+desc:  Mostramos numeros pares dentro de un rango de numeros
 tags: [PHP, basico]
 ---
 */
@@ -23,19 +23,26 @@ tags: [PHP, basico]
 </style>
 
 <body>
-    <?php
-    // Declaramos la variable que vamos a utilizar
-    $numero =rand(1,100);
-    $mensaje = "";
+    <div>
+        <p>Números pares del 0 al 50</p>
 
-    // Le asiganmos valor a la variable con la sentencia match
-    $mensaje = match ($numero) {
-        1 => ' y en castellano es 1',
-        2 => ' y en castellano es 2',
-        3 => ' y en castellano es 3',
-    }
+        <?php
+        // Declaramos las variables 
+        $numero = 0;
+        $mensaje = 0;
 
-    ?>
+        while ($numero <= 50) {
+            if ($numero % 2 == 0) {
+                echo "<ul>$numero</ul>";
+            }
+            $numero++;
+        }
+
+        ?>
+    </div>
+
+
+
 </body>
 
 </html>
