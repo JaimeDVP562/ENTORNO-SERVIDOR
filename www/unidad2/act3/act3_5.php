@@ -32,7 +32,6 @@ tags: [PHP, basico]
         $suma = 0;
 
         while ($numero <= 10) {
-
             $numero++;
         }
 
