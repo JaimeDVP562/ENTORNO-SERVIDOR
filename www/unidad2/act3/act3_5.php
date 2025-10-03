@@ -9,8 +9,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_3_4
-desc:  Mostramos numeros pares dentro de un rango de numeros
+title: Unidad 2:  Actividad_3_5
+desc:  Sumamos los números del 1 al 10
 tags: [PHP, basico]
 ---
 */
@@ -28,14 +28,17 @@ tags: [PHP, basico]
 
         <?php
         // Declaramos las variables 
-        $numero = 0;
+        $numero = 1;
         $suma = 0;
 
         while ($numero <= 10) {
-            $numero++;
+            $numero ++;
+            $suma += $numero;
         }
 
         ?>
+
+        <p>La suma de todos los números de 1 al 10 es : <?php echo $suma ?></p>
     </div>
 
 

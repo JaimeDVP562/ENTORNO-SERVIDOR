@@ -29,8 +29,7 @@ tags: [PHP, basico]
         <?php
         // Declaramos las variables 
         $numero = 0;
-        $mensaje = 0;
-
+        
         while ($numero <= 50) {
             if ($numero % 2 == 0) {
                 echo "<ul>$numero</ul>";
