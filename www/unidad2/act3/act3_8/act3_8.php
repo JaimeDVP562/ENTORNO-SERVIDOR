@@ -40,31 +40,19 @@ tags: [PHP, basico]
 
     <div>
         <?php
-        // Declaramos las variables 
-        $dado1 = rand(1, 6);
-        $dado2 = rand(1, 6);
-        $dado3 = rand(1, 6);
-        $dado4 = rand(1, 6);
-        $dado5 = rand(1, 6);
+        // Generar número aleatorio entre 1 y 5
+        $ramdonNumber1 = rand(1, 5);
+        $valoresDados = [];
 
-        // Utilizamos if-else para mostrar comprobar los resultados
-        if (($dado1 < $dado2) && ($dado1 < $dado3) && ($dado1 < $dado4) && ($dado1 < $dado5)) {
-            echo ("<p>El valor más pequeño es: $dado1.</p>");
-        } else if (($dado2 < $dado1) && ($dado2 < $dado3) && ($dado2 < $dado4) && ($dado2 < $dado5)) {
-            echo ("<p>El valor más pequeño es: $dado2.</p>");
-        } elseif (($dado3 < $dado1) && ($dado3 < $dado2) && ($dado3 < $dado4) && ($dado3 < $dado5)) {
-            echo ("<p>El valor más pequeño es: $dado3.</p>");
-        } elseif (($dado4 < $dado1) && ($dado4 < $dado2) && ($dado4 < $dado5) &&  ($dado1 < $dado5)) {
-            echo ("<p>El valor más pequeño es: $dado4.</p>");
-        }elseif (($dado5 < $dado1) && ($dado5 < $dado2) && ($dado5 < $dado3)&& ($dado5 < $dado4)) {
-            echo ("<p>El valor más pequeño es: $dado5.</p>");
+        for ($i = 1; $i <= $ramdonNumber1; $i++) {
+            $numeroDado = rand(1, 6);
+            $valoresDados[] = $numeroDado;
+            echo "<img src='img/{$numeroDado}.svg'>";
         }
+
+        $valorMinimo = min($valoresDados);
         ?>
-        <img src="img/<?php echo ($dado1); ?>.svg" alt="">
-        <img src="img/<?php echo ($dado2); ?>.svg" alt="">
-        <img src="img/<?php echo ($dado3); ?>.svg" alt="">
-        <img src="img/<?php echo ($dado4); ?>.svg" alt="">
-        <img src="img/<?php echo ($dado5); ?>.svg" alt="">
+        <p>El valor más pequeño obtenido es: <?php echo $valorMinimo; ?></p>
     </div>
 
 </body>
