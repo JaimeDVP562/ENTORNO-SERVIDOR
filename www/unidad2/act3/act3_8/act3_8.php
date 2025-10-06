@@ -9,8 +9,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_3_7
-desc:  Dado más pequeño
+title: Unidad 2:  Actividad_3_8
+desc:  Dado más pequeño de cinco dados aleatorios
 tags: [PHP, basico]
 ---
 */
