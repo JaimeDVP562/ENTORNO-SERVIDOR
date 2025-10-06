@@ -46,7 +46,7 @@ tags: [PHP, basico]
         for ($i = 0; $i < 10; $i++) {
             $resultado = 7 * $i;
 
-            echo "<table> <tr><td> 7 x $i = $resultado </td></tr>
+            echo "<table> <tr><td>7</td> <td> x </td> <td>$i</td> <td>=</td> <td>$resultado</td> </td>
             
             </table>";
         }
