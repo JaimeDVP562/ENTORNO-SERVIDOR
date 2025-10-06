@@ -18,10 +18,11 @@ tags: [PHP, basico]
 
 
 <body>
-    <p>Ejemplos: </p>
 
 
     <div>
+        <p>Ejemplos: </p>
+
         <?php
         // Declaramos las variables 
         $dado1 = rand(1, 6);
@@ -37,6 +38,7 @@ tags: [PHP, basico]
         ?>
         <img src="img/<?php echo ($dado1); ?>.svg" alt="">
         <img src="img/<?php echo ($dado2); ?>.svg" alt="">
+
     </div>
 
 
