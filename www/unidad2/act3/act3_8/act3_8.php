@@ -15,7 +15,24 @@ tags: [PHP, basico]
 ---
 */
 ?>
+<style>
+    table {
 
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    th,
+    td {
+        border: 2px solid #333;
+        padding: 10px;
+        text-align: left;
+    }
+
+    thead {
+        background-color: #f0f0f0;
+    }
+</style>
 
 <body>
     <p>Ejemplos: </p>
@@ -26,6 +43,8 @@ tags: [PHP, basico]
         // Declaramos las variables 
         $dado1 = rand(1, 6);
         $dado2 = rand(1, 6);
+
+        $respuesta = "";
 
         // Utilizamos if-else para mostrar comprobar los resultados
         if ($dado1 == $dado2) {
