@@ -29,7 +29,7 @@ $alturaMasAlta = max($personas);
 ?>
 <body>
     <h2>Alturas de personas</h2>
-<table border="1">
+<table >
     <tr>
         <th>Nombre</th>
         <th>Altura (cm)</th>

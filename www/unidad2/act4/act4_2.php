@@ -12,6 +12,11 @@ tags: [PHP, basico]
 <head>
     <title>Document</title>
 </head>
+<style>
+    table{
+        border:solid;
+    }
+</style>
 <body>
     <?php
     // Array de personas: cada persona es un array asociativo
@@ -23,7 +28,7 @@ tags: [PHP, basico]
     ?>
 
     <h2>Listado de personas</h2>
-    <table border="1">
+    <table >
         <tr>
             <th>Nombre</th> 
             <th>Altura (cm)</th>
