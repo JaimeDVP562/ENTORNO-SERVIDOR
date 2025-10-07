@@ -17,14 +17,12 @@ tags: [PHP, basico]
 </head>
 <?php
 $array1 = [
-    "num1" => rand(1,100),
-    "num2" => rand(1,100),
-    "num3" => rand(1,100)
+    "num1" => rand(1, 100),
+    "num2" => rand(1, 100),
+    "num3" => rand(1, 100)
 ];
-
 $mediaArray = array_sum($array1) / count($array1);
-echo("La media de {$num1} , {$num2} y {$num3} es $mediaArray");
-?>
+echo "La media de {$array1['num1']}, {$array1['num2']} y {$array1['num3']} es $mediaArray";?>
 
 <body>
 
