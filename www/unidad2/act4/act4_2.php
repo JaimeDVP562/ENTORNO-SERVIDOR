@@ -2,7 +2,7 @@
 /*
 ---
 title: Unidad 2:  Actividad_4_2
-desc:  Array bidimensional
+desc:  Array bidimensional. Almacenamos datos de personas y mostramos en una TABLA
 tags: [PHP, basico]
 ---
 */

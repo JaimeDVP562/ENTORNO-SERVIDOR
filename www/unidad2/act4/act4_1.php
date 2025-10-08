@@ -2,7 +2,7 @@
 /*
 ---
 title: Unidad 2:  Actividad_4_1
-desc:  Arrays asociativos
+desc:  Arrays asociativos, datos de personas, calculamos LA MEDIA y obtiene el VALOR MÁS ALTO
 tags: [PHP, basico]
 ---
 */
@@ -51,6 +51,6 @@ $alturaMasAlta = max($personas);
 </table>
 
 
-    <p>La persona más alta es <strong><?= $personaMasAlta ?></strong> con <strong><?= $alturaMasAlta ?> cm</strong>.</p>
+    <p>La persona más alta es <?= $personaMasAlta ?> con <?= $alturaMasAlta ?></p>
 </body>
 </html>

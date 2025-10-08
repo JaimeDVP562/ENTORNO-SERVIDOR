@@ -16,13 +16,16 @@ tags: [PHP, basico]
     <title>Document</title>
 </head>
 <?php
+// Declaramos y los rellenamos con valores aleatorios
 $array1 = [
     "num1" => rand(1, 100),
     "num2" => rand(1, 100),
     "num3" => rand(1, 100)
 ];
+
+// Con la funcion sum() sumamos los valores y con count() cuenta el tamaño del array 
 $mediaArray = array_sum($array1) / count($array1);
-echo "La media de {$array1['num1']}, {$array1['num2']} y {$array1['num3']} es $mediaArray";?>
+echo "La media de {$array1['num1']}, {$array1['num2']} y {$array1['num3']} es $mediaArray"; ?>
 
 <body>
 

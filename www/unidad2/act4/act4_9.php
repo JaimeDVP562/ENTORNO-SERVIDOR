@@ -1,8 +1,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_4_8
-desc:  Array --> Crea bucle entre un rango y elimina los repetidos
+title: Unidad 2:  Actividad_4_9
+desc:  Array --> Creamos un grupo de emoticonos, elegimos uno y mostramos si el elegido está en el grupo
 tags: [PHP, basico]
 ---
 */
@@ -19,6 +19,10 @@ tags: [PHP, basico]
 <body>
     <div>
         <?php
+        // Generar entre 5 y 10 emoticonos
+        $cantidad = rand(5, 10);
+        $grupo = generarGrupoEmoticonos($cantidad);
+
         // Función para generar un emoticono aleatorio dentro del rango Unicode
         function generarEmoticono($min = 128512, $max = 128580)
         {
@@ -35,12 +39,8 @@ tags: [PHP, basico]
             return $grupo;
         }
 
-        // Generar entre 5 y 10 emoticonos
-        $cantidad = rand(5, 10);
-        $grupo = generarGrupoEmoticonos($cantidad);
-
         // Mostrar el grupo
-        echo "Grupo de emoticonos:\n";
+        echo "Grupo:\n";
         echo implode(" ", $grupo) . "\n";
 
         // Elegir un emoticono al azar
@@ -50,7 +50,7 @@ tags: [PHP, basico]
         // Verificar si está en el grupo
         if (in_array($emoticono, $grupo)) {
             echo "Si está en el grupo\n";
-        } 
+        }
         ?>
 
     </div>
