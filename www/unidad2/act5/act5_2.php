@@ -19,35 +19,49 @@ tags: [PHP, basico]
 <body>
     <?php
     //  Creamos los arrays asociativos
-    $empleados = [
+    $usuarios = [
         ["nombre" => "Ana", "departamento" => "Ventas", "estado" => "activo"],
         ["nombre" => "Luis", "departamento" => "TI", "estado" => "inactivo"],
-        ["nombre" => "MArta", "departamento" => "Marketing", "estado" => "activo"]
-
+        ["nombre" => "Marta", "departamento" => "Marketing", "estado" => "activo"]
     ];
-
-    // Filtramos por el campo que queramos en este caso
-    $empleadosActivos = array_filter($empleados, function($empleado){
-        return $empleado ["estado"] === "activo";
+    $usuariosActivos = array_filter($usuarios, function ($usuario) {
+        return $usuario["estado"] === "activo";
     });
-
-    // Mostramos la lista del primer proveedor
-    echo ("<h3>Empleados</h3><ul>");
-    foreach ($empleados as $respuesta){
-        echo ("<li>$respuesta</li>");
-    }
-    echo("</ul>");
-    
-    // Mostramos la lista del segundo proveedor
-    echo ("<h3>Empleados activos</h3><ul>");
-    foreach ($empleadosActivos as $respuesta){
-        echo ("<li>$respuesta</li>");
-    }
-    echo("</ul>");
 
 
     ?>
 
+        <h2>Emplados</h2>
+    <table >
+        <tr>
+            <th>Nombre</th> 
+            <th>Departamento</th>
+            <th>Estado</th>
+        </tr>
+        <?php foreach ($usuarios as $usuario): ?>
+            <tr>
+                <td><?= $usuario['nombre'] ?></td>
+                <td><?= $usuario['departamento'] ?></td>
+                <td><?= $usuario['estado'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+
+            <h2>Emplados activos</h2>
+    <table >
+        <tr>
+            <th>Nombre</th> 
+            <th>Departamento</th>
+            <th>Estado</th>
+        </tr>
+        <?php foreach ($usuariosActivos as $usuario): ?>
+            <tr>
+                <td><?= $usuario['nombre'] ?></td>
+                <td><?= $usuario['departamento'] ?></td>
+                <td><?= $usuario['estado'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
 </body>
 
 </html>
