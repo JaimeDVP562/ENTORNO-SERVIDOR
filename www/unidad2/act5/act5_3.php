@@ -1,8 +1,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_5_2
-desc:  Array --> Creamos un ARRAY ASOCIATIVO --> FILTRAR POR CAMPO --> TABLA
+title: Unidad 2:  Actividad_5_3
+desc:  Array --> Creamos array FILTRA cuales son IGUALES y muestra los que se REPITEN
 tags: [PHP, basico]
 ---
 */
@@ -14,68 +14,40 @@ tags: [PHP, basico]
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            border: 2px solid black;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
 </head>
-
 
 <body>
     <?php
-    //  Creamos los arrays asociativos
-    $usuarios = [
-        ["nombre" => "Ana", "departamento" => "Ventas", "estado" => "activo"],
-        ["nombre" => "Luis", "departamento" => "TI", "estado" => "inactivo"],
-        ["nombre" => "Marta", "departamento" => "Marketing", "estado" => "activo"]
-    ];
-    $usuariosActivos = array_filter($usuarios, function ($usuario) {
-        return $usuario["estado"] === "activo";
-    });
+    //  Creamos los arrays 
+    $actividad1 = ["Ana", "Luis", "Marta", "Pablo"];
+    $actividad2 = ["Pablo", "Lucía", "Ana"];
 
+    // Fusionamos los arrays con el array_mergue()
+    $actividades1_2 = array_intersect($actividad1, $actividad2);
+
+
+    // Mostramos la lista del primer proveedor
+    echo ("<h3>Personas en actividad 1</h3><ul>");
+    foreach ($actividad1 as $actividad){
+        echo ("<li>$actividad</li>");
+    }
+    echo("</ul>");
+        // Mostramos la lista del segundo proveedor
+    echo ("<h3>Personas en actividad 2</h3><ul>");
+    foreach ($actividad2 as $actividad){
+        echo ("<li>$actividad</li>");
+    }
+    echo("</ul>");
+
+    // Mostramos la lista final de productos sin duplicados
+    echo "<h3>Personas en ambas actividades</h3><ul>";
+    foreach ($actividades1_2 as $actividad) {
+        echo "<li>$actividad</li>";
+    }
+    echo "</ul>";
 
     ?>
 
-    <h2>Emplados</h2>
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Departamento</th>
-            <th>Estado</th>
-        </tr>
-        <?php foreach ($usuarios as $usuario): ?>
-            <tr>
-                <td><?= $usuario['nombre'] ?></td>
-                <td><?= $usuario['departamento'] ?></td>
-                <td><?= $usuario['estado'] ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-
-    <h2>Emplados activos</h2>
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Departamento</th>
-            <th>Estado</th>
-        </tr>
-        <?php foreach ($usuariosActivos as $usuario): ?>
-            <tr>
-                <td><?= $usuario['nombre'] ?></td>
-                <td><?= $usuario['departamento'] ?></td>
-                <td><?= $usuario['estado'] ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
 </body>
 
 </html>
