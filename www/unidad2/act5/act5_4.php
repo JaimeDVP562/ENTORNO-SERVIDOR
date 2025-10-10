@@ -60,7 +60,8 @@ tags: [PHP, basico]
             <th>Campo</th>
             <th>Valor</th>
         </tr>
-        <?php foreach ($camposIntroducidos as $campo => $valor): ?>
+        <!---->
+        <?php foreach ($camposIntroducidos as $campo => $valor): ?><!--Así es como mostramos los arrays asociativos IMPORTANTE--> 
             <tr>
                 <td><?= $campo ?></td>
                 <td><?= $valor ?></td>
@@ -71,7 +72,7 @@ tags: [PHP, basico]
 
         <?php
         echo "<h2>Campos faltantes</h2><ul>";
-        foreach($camposFaltantes as $campoFaltante){
+        foreach($camposFaltantes as $campoFaltante){//<!--Así es como mostramos los arrays "normales" IMPORTANTE-->
             echo "<li>$campoFaltante</li>";
         }
         echo "</ul>";
