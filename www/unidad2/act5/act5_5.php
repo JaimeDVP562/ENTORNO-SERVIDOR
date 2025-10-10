@@ -21,8 +21,8 @@ tags: [PHP, basico]
     //  Creamos los arrays asociativos
     $productos = [
         ["nombre" => "camiseta", "precio" => 15],
-        ["nombre" => "pantalon", "precio" => 35,],
-        ["nombre" => "zapatos", "precio" => 50,],
+        ["nombre" => "pantalon", "precio" => 35],
+        ["nombre" => "zapatos", "precio" => 50],
         ["nombre" => "gorra", "precio" => 10],
     ];
     $productosMasCaros = array_filter($productos, function ($producto) {
@@ -31,7 +31,7 @@ tags: [PHP, basico]
 
 
     ?>
-
+    <h1>Ejercicio 5 — Filtrar productos caros</h1>
     <h2>Lista completa de productos</h2>
     <table>
         <tr>
