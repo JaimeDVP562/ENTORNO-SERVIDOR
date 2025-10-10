@@ -2,7 +2,8 @@
 /*
 ---
 title: Unidad 2:  Actividad_5_4
-desc:  Array --> Creamos array FILTRA qué campos FALTAN POR RELLENAR y PIDE QUE LOS RELLENES
+desc:  Array --> Creamos array FILTRA qué campos FALTAN POR RELLENAR y PIDE QUE LOS RELLENES.
+TABLA con array asociativo. 
 tags: [PHP, basico]
 ---
 */
@@ -15,7 +16,11 @@ tags: [PHP, basico]
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    li{
+        color:red;
+    }
+</style>
 <body>
     <?php
     // Cremaos un array para guardar las variables 
@@ -29,58 +34,48 @@ tags: [PHP, basico]
     // Seleccionamos los campos que no se repiten 
     $camposFaltantes  = array_diff($camposObligatorios, $camposEnviados);
 
-    
-    echo "<h3>Campos obligatorios.</h3><tr>";
-    foreach ($camposObligatorios as $campoObligatorio) {
-        echo "<td>$campoObligatorio</br></td>";
-    }
-    echo "</tr>";
-
-    echo "Campos enviados por el usuario <tr></tr>";
-    foreach ($camposEnviados as $campoEnviados) {
-        echo "$campoEnviado";
-        
-    }
-    echo "</tr>";
-
-    echo "<ul><h3>Campos faltantes </h3></ul>";
-    foreach ($camposFaltantes as $respuesta) {
-        echo "<li>$respuesta</li>";
-    }
+    // 
+    $mostrarCamposIntroducidos = array_filter($camposIntroducidos, function ($campoIntroducido) {
+        return $campoIntroducido;
+    });
 
     ?>
-
- <h2>Emplados</h2>
-    <table >
+    <h2>Campos obligatorios</h2>
+    <table>
         <tr>
-            <th>Nombre</th> 
-            <th>Departamento</th>
-            <th>Estado</th>
+            <th>Campo</th>
+            <th>Valor</th>
         </tr>
-        <?php foreach ($usuarios as $usuario): ?>
+        <?php foreach ($camposObligatorios as $campoObligatorio): ?>
             <tr>
-                <td><?= $usuario['nombre'] ?></td>
-                <td><?= $usuario['departamento'] ?></td>
-                <td><?= $usuario['estado'] ?></td>
+                <td><?= $campoObligatorio ?></td>
+                
             </tr>
         <?php endforeach; ?>
     </table>
 
-            <h2>Emplados activos</h2>
-    <table >
+    <h2>Campos enviados por el usuario</h2>
+    <table>
         <tr>
-            <th>Nombre</th> 
-            <th>Departamento</th>
-            <th>Estado</th>
+            <th>Campo</th>
+            <th>Valor</th>
         </tr>
-        <?php foreach ($usuariosActivos as $usuario): ?>
+        <?php foreach ($camposIntroducidos as $campo => $valor): ?>
             <tr>
-                <td><?= $usuario['nombre'] ?></td>
-                <td><?= $usuario['departamento'] ?></td>
-                <td><?= $usuario['estado'] ?></td>
+                <td><?= $campo ?></td>
+                <td><?= $valor ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
+
+
+        <?php
+        echo "<h2>Campos faltantes</h2><ul>";
+        foreach($camposFaltantes as $campoFaltante){
+            echo "<li>$campoFaltante</li>";
+        }
+        echo "</ul>";
+        ?>
 </body>
 
 </html>
