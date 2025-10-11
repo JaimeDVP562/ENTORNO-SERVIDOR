@@ -17,10 +17,22 @@ tags: [PHP, basico]
     <title>Document</title>
 </head>
 <style>
-    li{
-        color:red;
+    table {
+        border-collapse: collapse;
+        /* quita los espacios entre bordes */
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        /* borde simple negro */
+    }
+
+    li {
+        color: red;
     }
 </style>
+
 <body>
     <?php
     // Cremaos un array para guardar las variables 
@@ -44,12 +56,11 @@ tags: [PHP, basico]
     <table>
         <tr>
             <th>Campo</th>
-            <th>Valor</th>
         </tr>
         <?php foreach ($camposObligatorios as $campoObligatorio): ?>
             <tr>
                 <td><?= $campoObligatorio ?></td>
-                
+
             </tr>
         <?php endforeach; ?>
     </table>
@@ -61,7 +72,7 @@ tags: [PHP, basico]
             <th>Valor</th>
         </tr>
         <!---->
-        <?php foreach ($camposIntroducidos as $campo => $valor): ?><!--Así es como mostramos los arrays asociativos IMPORTANTE--> 
+        <?php foreach ($camposIntroducidos as $campo => $valor): ?><!--Así es como mostramos los arrays asociativos IMPORTANTE-->
             <tr>
                 <td><?= $campo ?></td>
                 <td><?= $valor ?></td>
@@ -70,13 +81,13 @@ tags: [PHP, basico]
     </table>
 
 
-        <?php
-        echo "<h2>Campos faltantes</h2><ul>";
-        foreach($camposFaltantes as $campoFaltante){//<!--Así es como mostramos los arrays "normales" IMPORTANTE-->
-            echo "<li>$campoFaltante</li>";
-        }
-        echo "</ul>";
-        ?>
+    <?php
+    echo "<h2>Campos faltantes</h2><ul>";
+    foreach ($camposFaltantes as $campoFaltante) { //<!--Así es como mostramos los arrays "normales" IMPORTANTE-->
+        echo "<li>$campoFaltante</li>";
+    }
+    echo "</ul>";
+    ?>
 </body>
 
 </html>

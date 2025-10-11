@@ -15,6 +15,18 @@ tags: [PHP, basico]
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    table {
+        border-collapse: collapse;
+        /* quita los espacios entre bordes */
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        /* borde simple negro */
+    }
+</style>
 
 <body>
     <?php
@@ -36,7 +48,7 @@ tags: [PHP, basico]
     <table>
         <tr>
             <th>Producto</th>
-            <th>Precio</th>
+            <th>Precio (€)</th>
         </tr>
         <?php foreach ($productos as $producto): ?>
             <tr>
@@ -50,7 +62,7 @@ tags: [PHP, basico]
     <table>
         <tr>
             <th>Producto</th>
-            <th>Precio</th>
+            <th>Precio (€)</th>
         </tr>
         <?php foreach ($productosMasCaros as $productoMasCaro): ?>
             <tr>
