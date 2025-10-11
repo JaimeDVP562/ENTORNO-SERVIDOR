@@ -1,3 +1,12 @@
+<?php
+/*
+---
+title: Unidad 2:  Actividad_6_1
+desc:  Array --> Cuenta caracteres de un texto
+tags: [PHP, basico]
+---
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +26,7 @@
     // Obtenemos números de caracteres
     $cantidadCaracteres = strlen($texto);
     $resultado = ($limiteCaracteres - $cantidadCaracteres);
-    
+
     // Mostramos por pantalla 
     echo "<h2>Comentario</br></h2>";
     echo "Este es mi comentario para soporte técnico.</br></br>";
