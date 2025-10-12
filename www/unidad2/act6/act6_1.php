@@ -23,7 +23,7 @@ tags: [PHP, basico]
     $limiteCaracteres = 160;
   
 
-    // Obtenemos números de caracteres
+    // Obtenemos números de caracteres del texto introducido
     $cantidadCaracteres = strlen($texto);
     $resultado = ($limiteCaracteres - $cantidadCaracteres);
 
