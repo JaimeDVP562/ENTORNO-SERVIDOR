@@ -1,0 +1,30 @@
+<?php
+/*
+---
+title: Unidad 2:  Actividad_6_2
+desc:  Array --> Cuenta caracteres de un texto
+tags: [PHP, basico]
+---
+*/
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    // Declaramos las variables 
+
+    $ruta = "http://www.linkfred.com/carpeta1/index.php";
+    $archivo = basename($ruta);
+
+    // Mostramos por pantalla 
+    echo "URL: $ruta</br>";
+    echo "$archivo";
+
+    ?>
+</body>
+</html>
