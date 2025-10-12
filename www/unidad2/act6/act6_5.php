@@ -1,8 +1,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_6_2
-desc:  Array --> Cuenta caracteres de un texto
+title: Unidad 2:  Actividad_6_5
+desc:  Array --> Obtener el archivo de una ruta 
 tags: [PHP, basico]
 ---
 */
