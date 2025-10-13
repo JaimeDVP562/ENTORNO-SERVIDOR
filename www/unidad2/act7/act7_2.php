@@ -41,6 +41,7 @@ tags: [PHP, basico]
     print_r($arrayGenerado);
     echo "</pre>";
     ?>
+    
 </body>
 
 </html>
