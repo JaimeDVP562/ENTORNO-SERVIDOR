@@ -2,7 +2,7 @@
 /*
 ---
 title: Unidad 2:  Actividad_7_1
-desc:  Array --> FUNCIONES: Numero impar 
+desc:  Array --> FUNCIONES: Numero par - impar
 tags: [PHP, basico]
 ---
 */
