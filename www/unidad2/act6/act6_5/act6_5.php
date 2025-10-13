@@ -1,3 +1,12 @@
+<?php
+/*
+---
+title: Unidad 2:  Actividad_6_&
+desc:  Mini pagina WEB con PHP 
+tags: [PHP, basico]
+---
+*/
+?>
 <?php include 'header.php'; ?>
 <main>
   <p>Bienvenido a la página principal de mi mini sitio.</p>
