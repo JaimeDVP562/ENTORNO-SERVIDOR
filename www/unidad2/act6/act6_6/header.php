@@ -10,7 +10,7 @@
     <h1><?php echo $titulo; ?></h1>
     <nav>
       <ul>
-        <li><a href="act6_5.php">Inicio</a></li>
+        <li><a href="act6_6.php">Inicio</a></li>
         <li><a href="about.php">Acerca de</a></li>
         <li><a href="contact.php">Contacto</a></li>
       </ul>

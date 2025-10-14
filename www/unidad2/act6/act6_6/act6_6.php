@@ -1,7 +1,7 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_6_&
+title: Unidad 2:  Actividad_6_6
 desc:  Mini pagina WEB con PHP 
 tags: [PHP, basico]
 ---
