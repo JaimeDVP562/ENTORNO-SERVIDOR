@@ -55,12 +55,12 @@ tags: [PHP, basico]
     $resultadoDividir = dividir($num1, $num2);
 
     // Pintamos por pantalla 
-    echo "<ul>Las operaciones se hacen con los números $num1 y $num2";
-    echo "<li>Sumar : $resultadoSuma</li>";
-    echo "<li>Restar : $resultadoRestar</li>";
-    echo "<li>Multiplicar : $resultadoMultiplicar</li>";
-    echo "<li>Dividir : $resultadoDividir</li>";
-    echo "</ul>"
+    //echo "<ul>Las operaciones se hacen con los números $num1 y $num2";
+    //echo "<li>Sumar : $resultadoSuma</li>";
+    //echo "<li>Restar : $resultadoRestar</li>";
+    //echo "<li>Multiplicar : $resultadoMultiplicar</li>";
+    //echo "<li>Dividir : $resultadoDividir</li>";
+    //echo "</ul>"
     ?>
 </body>
 
