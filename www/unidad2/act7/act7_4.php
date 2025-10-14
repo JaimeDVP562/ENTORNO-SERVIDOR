@@ -37,6 +37,8 @@ tags: [PHP, basico]
     echo "<pre>";
     echo "$resultado";
     echo "</pre>";
+    
+    
     ?>
 </body>
 
