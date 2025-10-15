@@ -1,3 +1,12 @@
+<?php
+/*
+---
+title: Unidad 2:  Actividad_7_8
+desc:  Array --> FUNCIONES: Division con DOS TIPOS de retorno dirferentes
+tags: [PHP, basico]
+---
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 

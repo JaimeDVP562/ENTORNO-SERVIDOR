@@ -1,3 +1,12 @@
+<?php
+/*
+---
+title: Unidad 2:  Actividad_7_7
+desc:  Array --> FUNCIONES: Array para llamar a las funciones creadas en otro archivo
+tags: [PHP, basico]
+---
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 
