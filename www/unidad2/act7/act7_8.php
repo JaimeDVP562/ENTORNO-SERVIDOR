@@ -2,7 +2,7 @@
 /*
 ---
 title: Unidad 2:  Actividad_7_8
-desc:  Array --> FUNCIONES: Division con DOS TIPOS de retorno dirferentes
+desc:  Array --> FUNCIONES: Division con DOS TIPOS de retorno diferentes
 tags: [PHP, basico]
 ---
 */

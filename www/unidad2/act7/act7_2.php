@@ -25,6 +25,7 @@ tags: [PHP, basico]
         $resultado = [];
 
         if ($min > $max) {
+            // Importante comprobar que el maximo sea mayor que el minimo si no, tenemos que cambiarle los valores
             [$min, $max] = [$max, $min];
         }
         for ($i=0; $i < $tam; $i++) { 

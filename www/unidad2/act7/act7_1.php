@@ -2,7 +2,7 @@
 /*
 ---
 title: Unidad 2:  Actividad_7_1
-desc:  Array --> FUNCIONES: Numero par - impar
+desc:  Array --> FUNCIONES: Numero par - impar Comprobando con bool
 tags: [PHP, basico]
 ---
 */
@@ -17,17 +17,23 @@ tags: [PHP, basico]
 <body>
     <?php
     // Declaramos las variables 
-    $numeroRamdon = rand(1,10);
+    $num = rand(1,10);
     
     // Creamos la funcion 
-    function parImpar(int $num) : string{
-        $resultado = ($num % 2 === 0) ? "El numero $num es par" : "El numero $num es impar";
-
+    function parImpar(int $num) : bool{
+        if ($num % 2 === 0){
+            $resultado = true;
+        } else {
+            $resultado = false;
+        }
         return $resultado;
     }
 
     // Llamamos a la funcion
-    echo parImpar($numeroRamdon);
+    $resultado = parImpar($num);
+
+    // Imprimimos por pantalla 
+    echo ($resultado ? "El numero $num es par" : "El numero $num es impar");
     ?>
 </body>
 </html>

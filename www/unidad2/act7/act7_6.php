@@ -2,7 +2,7 @@
 /*
 ---
 title: Unidad 2:  Actividad_7_6
-desc:  Array --> FUNCIONES: Obtener el número maximo de un array
+desc:  Array --> FUNCIONES: Funciones de CALCULADORA
 tags: [PHP, basico]
 ---
 */

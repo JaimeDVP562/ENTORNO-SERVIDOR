@@ -24,7 +24,7 @@ tags: [PHP, basico]
             if ($valor > 10) {
                 $resultado[] = $valor; 
             }
-        }        
+        }    
         return $resultado;
     }  
     
