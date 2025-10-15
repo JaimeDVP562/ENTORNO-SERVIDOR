@@ -9,31 +9,25 @@
 
 <body>
     <?php
-    // Declaramos las variables
-    $dividendo;
-    $divisor;
-
-    // Si queremos devolver tanto una float porque nos obliguen como una "excepcion" podemos utilizar el ?float
-    function dividir(int $dividendo, int $divisor = 4): ?float
+    function dividir(int $dividendo, int $divisor = 4): string|float
     {
-    if ($divisor == 0) {
-        echo "Error : División por cero";
-        return null;
-    } else {
-        $resultado = $dividendo / $divisor;
+        if ($divisor === 0) {
+            return "Error: División por cero.";
+        }
+
+        return $dividendo / $divisor;
     }
-        return $resultado;
-    };
 
-    // Llamamos a la funcion
-    $resultado1 = dividir(3,4);
-    $resultado2 = dividir(6,0);
-    $resultado3 = dividir(6,4);
+    // Llamamos a la función
+    $resultado1 = dividir(3, 4);
+    $resultado2 = dividir(6, 0);
+    $resultado3 = dividir(6); // Usa el valor por defecto
 
+    // Mostramos los resultados
     echo "La división 3 entre 4 es: $resultado1 </br>";
     echo "La división 6 entre 0 es: $resultado2 </br>";
-    echo "La división 6 entre 4 es:(valor por defecto, porque no he indicado el divisor) es: $resultado3 </br>";
-    ?>  
+    echo "La división 6 entre 4 (valor por defecto) es: $resultado3 </br>";
+    ?>
 </body>
 
 </html>
