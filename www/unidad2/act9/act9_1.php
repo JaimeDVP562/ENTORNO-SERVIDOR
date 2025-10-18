@@ -1,8 +1,8 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_8_1
-desc:  CAPTURANDO ERRORES
+title: Unidad 2:  Actividad_9_1
+desc:  FICHEROS: Creamos un fichero, añadimos comentarios ramdon, creamos contador de elementos y mostramos por pantalla
 tags: [PHP, basico]
 ---
 */
@@ -43,12 +43,12 @@ tags: [PHP, basico]
 
     // Elegimos un comentario al azar de los que tenemos guardados en el array
     $comentarioRamdon = $comentarios[array_rand($comentarios)];
-    $totalComentarios = count($comentarios);
+    // Declaramos las variables que vamos a utilizar
+    $totalComentarios = 0;
     $fecha = date("Y-m-d H:i:s");
-    // Abrimos el archivo 
+    // Abrimos el archivo para añadir elementos
     $fh = fopen($path, "a");
     // Comprobamos que el fichero exista 
-    $fh = fopen($path, "a");
     if ($fh === false) {
         $mensaje = "Error al abrir el archivo para escritura.";
         echo "<p>$mensaje</p>";
@@ -58,17 +58,27 @@ tags: [PHP, basico]
             $mensaje = "Error al escribir en el archivo.";
             echo "<p>$mensaje</p>";
             error_log($mensaje);
-        } else {
-            echo "<p>Comentario añadido correctamente.</p>";
         }
-        fclose($fh);
     }
     // Importante cerrar el archivo siempre    
     fclose($fh);
-    echo "Total de comentarios guardados: $totalComentarios <br>";
 
-    
+    echo "<h2>📝 Gestor de Comentarios (sin BD)</h2>";
+    // Contamos los comentarios
+    if (file_exists($path)) {
+        // Creamos una variable para meter todas las lineas, ignorando los saltos de linea y las lineas vacias
+        $lineas = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $totalComentarios = count($lineas);
+        echo "<p><b>Total comentarios guardados:</b> $totalComentarios</p>";
+    } else {
+        echo "<p>El archivo no existe aún.</p>";
+    }
+
+    //Mostramos el ultimo comentario
+    echo "<p>Último comentario añadido: $comentarioRamdon</p>";
+
     // Volvemos a abrir el fichero para poder leerlo
+    echo "<h2>Historial</h2>";
     $fh = fopen($path, 'r');
 
     if ($fh === false) {
@@ -80,6 +90,7 @@ tags: [PHP, basico]
     }
     // Importante cerrar el archivo siempre    
     fclose($fh);
+
 
     ?>
 </body>
