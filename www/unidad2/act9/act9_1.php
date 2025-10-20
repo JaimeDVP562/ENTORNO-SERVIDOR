@@ -62,8 +62,9 @@ tags: [PHP, basico]
     }
     // Importante cerrar el archivo siempre    
     fclose($fh);
-
+    
     echo "<h2>📝 Gestor de Comentarios (sin BD)</h2>";
+
     // Contamos los comentarios
     if (file_exists($path)) {
         // Creamos una variable para meter todas las lineas, ignorando los saltos de linea y las lineas vacias
