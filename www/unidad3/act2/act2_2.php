@@ -1,4 +1,13 @@
 <?php
+/*
+---
+title: Unidad 2:  Actividad_9_1
+desc:  FORMULARIOS: Implementa un banner de cookies que permita aceptar o borrar cookies usando un formulario.
+tags: [PHP, basico]
+---
+*/
+?>
+<?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["aceptar"])) {
         setcookie("aceptarCookies", "1", time() + 3600);
