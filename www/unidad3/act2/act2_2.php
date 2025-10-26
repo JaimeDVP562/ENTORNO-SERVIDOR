@@ -1,7 +1,7 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_9_1
+title: Unidad 2:  Actividad_2_2
 desc:  FORMULARIOS: Implementa un banner de cookies que permita aceptar o borrar cookies usando un formulario.
 tags: [PHP, basico]
 ---

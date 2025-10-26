@@ -1,7 +1,7 @@
 <?php
 /*
 ---
-title: Unidad 2:  Actividad_9_1
+title: Unidad 3: Actividad 2_1
 desc:  FORMULARIOS: Modifica el color de fondo de una página web usando un formulario y cookies.
 tags: [PHP, basico]
 ---
@@ -47,7 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["color"])) {
         </div>
         </form>
     </main>
-
 </body>
 
 </html>
