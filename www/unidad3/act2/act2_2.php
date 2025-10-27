@@ -8,17 +8,15 @@ tags: [PHP, basico]
 */
 ?>
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_POST["aceptar"])) {
-        setcookie("aceptarCookies", "1", time() + 3600);
-        header("Location: " . $_SERVER["PHP_SELF"]);
-        exit;
-    }
-    if (isset($_POST["borrar"])) {
-        setcookie("aceptarCookies", "", time() - 3600);
-        header("Location: " . $_SERVER["PHP_SELF"]);
-        exit;
-    }
+if (isset($_POST["aceptar"])) {
+    setcookie("aceptarCookies", "1", time() + 3600);
+    header("Location: " . $_SERVER["PHP_SELF"]);
+    exit;
+}
+if (isset($_POST["borrar"])) {
+    setcookie("aceptarCookies", "1", time() - 3600);
+    header("Location: " . $_SERVER["PHP_SELF"]);
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -42,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <p>Usamos las cookies para mejorar tu experiencia. Al continuar aceptas nuestra <a href="./act2_2.php">Politica de cookies</a></p>
                 <button type="submit" name="aceptar">Aceptar Cookies</button>
             </form>
-
         <?php else: ?>
             <form method="post" action="">
                 <button type="submit" name="borrar">Borrar cookies</button>

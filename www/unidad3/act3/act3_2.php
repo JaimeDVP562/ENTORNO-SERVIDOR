@@ -13,17 +13,19 @@ session_start();
 // Creamos las variables 
 $emailValido = "correo@falso.com";
 $claveValida = "123";
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'] ?? '';
-    $contraseña = $_POST['contraseña'] ?? '';
-    if (($email === $emailValido) && ($contraseña === $claveValida)) {
-        $_SESSION['usuario'] = $email;
-        header("Location: act3_2.php");
-        exit;
-    } else {
-        $error = 'Email o contraseña incorrectos.';
-    }
+
+$email = $_POST['email'] ?? '';
+$contraseña = $_POST['contraseña'] ?? '';
+$error = false;
+
+if (($email === $emailValido) && ($contraseña === $claveValida)) {
+    $_SESSION['usuario'] = $email;
+    header("Location: act3_2.php");
+    exit;
+} else {
+    $error = 'Email o contraseña incorrectos.';
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

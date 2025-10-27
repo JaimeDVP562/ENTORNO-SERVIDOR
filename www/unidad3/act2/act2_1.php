@@ -8,9 +8,9 @@ tags: [PHP, basico]
 */
 ?>
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["color"])) {
+if (isset($_POST["color"])) {
     $value = $_POST["color"];
-    setcookie("micookie", $value, time() + 3600); // 1 hora
+    setcookie("micookie", $value, time() +3600); // 1 hora
     $color = $value;
 } else {
     $color = $_COOKIE["micookie"] ?? 'white';
