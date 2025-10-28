@@ -10,22 +10,23 @@ tags: [PHP, basico]
 <?php
 // Iniciamos sesion
 session_start();
+
 // Creamos las variables 
 $emailValido = "correo@falso.com";
 $claveValida = "123";
 
+//Comprueba si las credenciales son incorrectas
 $email = $_POST['email'] ?? '';
 $contraseña = $_POST['contraseña'] ?? '';
-$error = false;
+
 
 if (($email === $emailValido) && ($contraseña === $claveValida)) {
     $_SESSION['usuario'] = $email;
-    header("Location: act3_2.php");
+    header("Location: ./privado.php");
     exit;
-} else {
+} elseif(!($email === $emailValido) || ($contraseña === $claveValida)) {
     $error = 'Email o contraseña incorrectos.';
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,11 +40,12 @@ if (($email === $emailValido) && ($contraseña === $claveValida)) {
 
 <body>
     <main class="container">
-        <!--Lanzamos el error-->
-        <?php if (isset($error)): ?>
-            <p style="color: red"><?= $error ?></p>
-        <?php endif; ?>
+
+
         <form method="post" action="">
+            <?php if (isset($error)): ?>
+                <p style="color: red"><?= $error ?></p>
+            <?php endif; ?>
             <h1>Acceso al Sistema</h1>
             <label>Email <input name="email" type="email"></label>
             <label>Contraseña <input name="contraseña" type="password"></label>

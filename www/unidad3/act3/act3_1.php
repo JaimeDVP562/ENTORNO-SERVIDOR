@@ -10,26 +10,12 @@ tags: [PHP, basico]
 <?php
 // Iniciamos sesion 
 session_start();
-// Inicializamos las variables
+// Creamos las variables de sesion que vamos a utilizar para que las tengamos inicializadas antes de usarlas
 if (!isset($_SESSION['contadorA'])) {
     $_SESSION['contadorA'] = 0;
 }
 if (!isset($_SESSION['contadorB'])) {
     $_SESSION['contadorB'] = 0;
-}
-// Procesamos el formulario y cada vez que pulsemos un boton le daremos un valor u otro a las variables
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
-    if (isset($_POST['opcionA'])) {
-        $_SESSION['contadorA']++;
-    }
-    if (isset($_POST['opcionB'])) {
-        $_SESSION['contadorB']++;
-    }
-    if (isset($_POST['borrar'])) {
-        $_SESSION['contadorA'] = 0;
-        $_SESSION['contadorB'] = 0;
-    }
 }
 ?>
 <!DOCTYPE html>
@@ -45,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <main>
         <div class="container">
-            <form method="post" action="">
+            <form method="post" action="./votar.php">
                 <h2>Votación</h2>
                 <p>Opcion A: <?= $_SESSION['contadorA'] ?> votos --- Opcion B: <?= $_SESSION['contadorB'] ?> votos</p>
                 <button name="opcionA" type="submit">Votar A</button>
