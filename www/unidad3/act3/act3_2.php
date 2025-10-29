@@ -19,13 +19,18 @@ $claveValida = "123";
 $email = $_POST['email'] ?? '';
 $contraseña = $_POST['contraseña'] ?? '';
 
-
-if (($email === $emailValido) && ($contraseña === $claveValida)) {
-    $_SESSION['usuario'] = $email;
-    header("Location: ./privado.php");
-    exit;
-} elseif(!($email === $emailValido) || ($contraseña === $claveValida)) {
-    $error = 'Email o contraseña incorrectos.';
+/**
+ * Tengo que meterlo si o si en con $_SERVER["REQUEST-METOHD] === 'POST' 
+ * para que el error no lo lance hasta que se envíen los datos del formulario
+ *  */
+if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+    if ($email === $emailValido && $contraseña === $claveValida) {
+        $_SESSION['usuario'] = $email;
+        header("Location: ./privado.php");
+        exit;
+    } else {
+        $error = 'Email o contraseña incorrectos.';
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -40,8 +45,6 @@ if (($email === $emailValido) && ($contraseña === $claveValida)) {
 
 <body>
     <main class="container">
-
-
         <form method="post" action="">
             <?php if (isset($error)): ?>
                 <p style="color: red"><?= $error ?></p>
