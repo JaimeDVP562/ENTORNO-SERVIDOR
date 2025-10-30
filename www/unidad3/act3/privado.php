@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if(empty($_SESSION['usuario'])){
+    header("Location: ./");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +24,7 @@
     <main class="container">
         <div >
             <p >¡Te encuentras en una zona secreta, solo visible por una persona identificada.</p>
-            <a href="./cerrar-sesion.php">Cerrar sesión</a>
+            <a href="cerrar-sesion.php">Cerrar sesión</a>
         </div>
     </main>
 </body>

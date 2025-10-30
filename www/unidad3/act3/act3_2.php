@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="./pico.min.css">
 </head>
 
 <body>
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             <button type="submit">Enviar</button>
             <p style="color: red">📌Usuario de prueba: correo@falso.com</p>
             <p style="color: red;">🔑Constraseña: 123</p>
-            <a href="./act3_2.php">Aceso a Zona Privada (Seción iniciada)</a>
+            <a href="./privado.php">Aceso a Zona Privada (Seción iniciada)</a>
         </form>
     </main>
 </body>
