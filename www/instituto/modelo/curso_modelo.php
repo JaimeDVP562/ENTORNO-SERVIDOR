@@ -1,4 +1,5 @@
 <?php
+
     try {
         // Conexión con la base de datos
         $conn = new PDO("mysql:host=db;dbname=dwes;charset=utf8mb4", "root", "root");
@@ -21,4 +22,5 @@
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
+
 ?>
