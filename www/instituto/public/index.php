@@ -29,3 +29,5 @@ $modeloestudiante = new EstudianteModelo($pdo);
 $controlador = new InstitutoModelo($modelocurso, $modeloestudiante);
 $data = $controlador->ejecutar();
 require_once "../vista/vista_instituto.php";
+
+?>
