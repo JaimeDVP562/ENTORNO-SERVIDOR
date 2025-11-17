@@ -15,23 +15,22 @@ class CursoModelo
     {
         try {
             // Sentencia SQL con parámetros nombrados
-            $sql = "INSERT INTO instituto (nombre) VALUES (:nombre)";
+            $sql = "INSERT INTO cursos (nombre) VALUES (:nombre)";
             $stmt = $this->pdo->prepare($sql);
             // Asociamos variables a los parámetros
             $stmt->bindParam(':nombre', $nombre);
             $stmt->execute();
 
-            echo "✅ Nuevos registros insertados correctamente usando bindParam().";
+            return true;
         } catch (PDOException $e) {
-            echo "❌ Error: " . $e->getMessage();
+            return false;
         }
-        return;
     }
     // Devuelve el ID de un curso si existe
     public function idPorNombre($nombre)
     {
         try {
-            $sql = "SELECT * FROM instituto WHERE nombre = :nombre";
+            $sql = "SELECT * FROM cursos WHERE nombre = :nombre";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindParam(':nombre', $nombre);
             $stmt->execute();
@@ -46,7 +45,7 @@ class CursoModelo
     public function todos()
     {
         try {
-            $sql = "SELECT * FROM instituto";
+            $sql = "SELECT * FROM cursos";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $cursos = $stmt->fetchAll();
@@ -60,7 +59,7 @@ class CursoModelo
     public function vaciarTodo()
     {
         try {
-            $sql = "DELETE  FROM instituto";
+            $sql = "DELETE  FROM cursos";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 

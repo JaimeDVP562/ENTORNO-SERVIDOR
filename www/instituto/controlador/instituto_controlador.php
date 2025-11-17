@@ -1,6 +1,6 @@
 <?php
 
-class InstitutoModelo 
+class InstitutoControlador 
 {
     private CursoModelo $curso;
     private EstudianteModelo $estudiante;

@@ -15,7 +15,7 @@ class EstudianteModelo
     {
         try {
             // Sentencia SQL con parámetros nombrados
-            $sql = "INSERT INTO instituto (nombre, edad, curso) VALUES (:nombre, :edad, :curso)";
+            $sql = "INSERT INTO estudiantes (nombre, edad, curso_id) VALUES (:nombre, :edad, :curso)";
             $stmt = $this->pdo->prepare($sql);
 
             // Asociamos variables a los parámetros
@@ -24,20 +24,18 @@ class EstudianteModelo
             $stmt->bindParam(':curso', $curso);
             $stmt->execute();
 
-            echo "✅ Nuevos registros insertados correctamente usando bindParam().";
+            return true;
         } catch (PDOException $e) {
-            echo "❌ Error: " . $e->getMessage();
+            return false;
         }
-        return;
     }
 
     // Actualizar los datos de un estudiante buscandolos por nombre
     public function actualizaPorNombre($nombreActual, $nuevoNombre, $nuevaEdad, $nuevoCursoId)
     {
-
         try {
             // Sentencia SQL con parámetros nombrados
-            $sql = "UPDATE instituto SET nombre = :nuevoNombre, edad = :nuevaEdad, curso = :nuevoCursoId WHERE nombre = :nombreActual";
+            $sql = "UPDATE estudiantes SET nombre = :nuevoNombre, edad = :nuevaEdad, curso_id = :nuevoCursoId WHERE nombre = :nombreActual";
             $stmt = $this->pdo->prepare($sql);
 
             // Asociamos variables a los parámetros
@@ -47,24 +45,23 @@ class EstudianteModelo
             $stmt->bindParam(':nombreActual', $nombreActual);
             $stmt->execute();
 
-            echo "✅ Nuevos registros actualizados correctamente usando bindParam().";
+            return true;
         } catch (PDOException $e) {
-            echo "❌ Error: " . $e->getMessage();
+            return false;
         }
     }
-        public function eliminarPorNombre($nombre)
+    public function eliminarPorNombre($nombre)
     {
-
         try {
             // Sentencia SQL con parámetros nombrados
-            $sql = "DELETE FROM instituto WHERE nombre = :nombre";
+            $sql = "DELETE FROM estudiantes WHERE nombre = :nombre";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindParam(':nombre', $nombre);
             $stmt->execute();
 
-            echo "✅ Registros eliminados correctamente";
+            return true;
         } catch (PDOException $e) {
-            echo "❌ Error: " . $e->getMessage();
+            return false;
         }
     }
 
@@ -72,7 +69,7 @@ class EstudianteModelo
     public function conCurso(){
                 try {
             // Sentencia SQL con parámetros nombrados
-            $sql = "SELECT * FROM instituto INNER JOIN curso ON instituto.curso = curso.id";
+            $sql = "SELECT estudiantes.*, cursos.nombre as nombre_curso FROM estudiantes INNER JOIN cursos ON estudiantes.curso_id = cursos.id";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $estudiantes = $stmt->fetchAll();
@@ -86,7 +83,7 @@ class EstudianteModelo
         public function vaciarTodo()
     {
         try {
-            $sql = "DELETE  FROM instituto";
+            $sql = "DELETE  FROM estudiantes";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 

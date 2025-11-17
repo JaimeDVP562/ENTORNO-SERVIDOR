@@ -21,13 +21,13 @@ require_once "../modelo/estudiante_modelo.php";
 require_once "../controlador/instituto_controlador.php";
 
 // Conexión con la base de datos
-$pdo = new PDO("mysql:host=db;dbname=dwes;charset=utf8mb4", "root", "root");
+$pdo = new PDO("mysql:host=db;dbname=instituto;charset=utf8mb4", "root", "root");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $modelocurso = new CursoModelo($pdo);
 $modeloestudiante = new EstudianteModelo($pdo);
-$controlador = new InstitutoModelo($modelocurso, $modeloestudiante);
-$data = $controlador->ejecutar();
+$controlador = new InstitutoControlador($modelocurso, $modeloestudiante);
+$datos = $controlador->ejecutar();
 require_once "../vista/vista_instituto.php";
 
-?>
+?>  
