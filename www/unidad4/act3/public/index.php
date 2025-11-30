@@ -7,6 +7,6 @@ require_once '../controlador/VoteController.php';
 $pdo = new PDO(DB_DSN, DB_USER, DB_PASS);
 $modelo = new VotacionModelo($pdo);
 $controlador = new VoteController($modelo);
-$data = $controlador->procesar();
+$data = $controlador->ejecutar();
 
 require_once '../vista/voteView.php';

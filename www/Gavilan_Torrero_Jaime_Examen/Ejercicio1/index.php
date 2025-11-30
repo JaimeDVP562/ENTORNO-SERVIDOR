@@ -4,43 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css">
     <title>Document</title>
 </head>
 <style>
-    table{
+    table {
         border: 1px;
     }
 </style>
+
 <body>
+
     <?php
-    $numerosAleatorios = rand(1, 100);
+    include_once 'funciones.php';
 
-    $arrayNumerosAleatorios = [99, 34, 45, 66, 77];
+    // Creamos la variables para el array
+    $numeroRamdon =[];
 
-    // Pintamos por pantalla el array generado con 5 numesros aleatorios ordenado
-    //print_r($arrayNumerosAleatorios);
-    //print_r(sort($arrayNumerosAleatorios));
-    $arrayOrdenado[] = sort($arrayNumerosAleatorios);
-
-    // Sumamos el array
-    $sumaTotal = array_sum($arrayNumerosAleatorios);
-
-    echo"Números y Categorias";
-        echo "<table>";
-        echo "<th>
-        <td>Numero</td>
-        <td>Categoria</td>
-        <td>Código</td>
-        </th>";
-    foreach ($arrayNumerosAleatorios as $value) {
-
-        echo "<td>$value</td>";
-
+    // Rellenamos el array con 5 numeros aleatorios
+    for ($i=0; $i < 5; $i++) { 
+        $num= rand(1,100);
+        $numeroRamdon[] = $num;
     }
-        echo "</table>";
+    
+    // Ordenamos el array 
+    sort($numeroRamdon);
 
-        echo "Suma total: $sumaTotal";
+    // Mostramos por patalla el array en una tabla
+    echo "<h1>Números y categorías</h1>";
+    echo "<table>";
+    echo "<th><tr><td>Números</td><td>Categorías</td><td>Código</td></tr></th>";
+    echo "<tbody>";
+    foreach ($numeroRamdon as $key => $value) {
+        echo "<tr><td>$value</td><td>" .categoria($value)."</td><td>".generaCodigo($value)."</td></tr>";
+    }
+    echo "</tbody>";
+    echo "</table>";
+    // Generamos la suma del array
+    echo "<h1>Suma total: ".array_sum($numeroRamdon)."</h1>";
+
+    
+    //Contamos cuantos numeros tiene cada rango
+    echo "<ul>";
+    echo "<li>Rango bajo : ";
+    foreach ($numeroRamdon as $key => $value) {
+        echo cuentaRangoBajo($value);
+    }
+    echo "</ul>";
+
 
     ?>
 </body>
