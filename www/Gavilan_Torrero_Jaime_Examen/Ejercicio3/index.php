@@ -12,7 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    table{
+        border: 1px;
+        border: solid;
+        border-color: black;
+    }
+</style>
 <body>
     <main class="container">
         <div>
@@ -26,32 +32,15 @@
                 ['id' => 4, 'nombre' => 'Monitor Dell 27"', 'precio' => 299.00, 'stock' => 8, 'categoria' => 'Informática'],
                 ['id' => 5, 'nombre' => 'Webcam HD', 'precio' => 50, 'stock' => 3, 'categoria' => 'Accesorios']
             ];
-
-
-            //$productosFiltrados = array_filter($productos);
-
-            /**
-             * 
-             * 
-             * 
-             */
-            echo "<table>
-            <th><td>id</td></th>
-            <th><td>nombre</td></th>
-            <th><td>precio</td></th>
-            <th><td>stock</td></th>
-            <th><td>categoria</td></th>";
-            
-            foreach ($productos as $producto) {
-                
-                echo "<tr>$producto[nombre]</tr></br>";
-                echo "<tr>$producto[precio]</tr>";
-                echo "<tr>$producto[stock]</tr>";
-                echo "<tr>$producto[categoria]</tr>";
-                echo "</td>";
+            echo "<h1>Tienda de informatica</h1>";
+            echo "<table><th><tr><td>id</td><td>nombre</td><td>precio</td><td><td>stock</td><td>categoria</td></tr></th>";
+            echo "<tbody>";
+            foreach ($productos as $key => $value) {
+                echo "<tr><td>$value[id]</td><td>$value[nombre]</td><td>$value[precio]</td><td>$value[stock]</td><td>$value[categoria]</td></tr>";
             }
+            echo "</tbody>";
             echo "</table>";
-            
+
             ?>
         <form method="post" action=""></form>
             <p>Filtar por categoria</p>

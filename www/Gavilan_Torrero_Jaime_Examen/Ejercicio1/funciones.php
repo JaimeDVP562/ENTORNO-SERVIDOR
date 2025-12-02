@@ -1,33 +1,40 @@
 <?php
+
+// Funcion para categoria
 function categoria($num): string
 {
     $resultado = "";
     if ($num >= 0 && $num <= 39) {
-        $resultado = "Bajo";
-    } elseif ($num >= 40 && $num <= 69) {
-        $resultado = "Medio";
-    } elseif ($num >= 70 && $num <= 100) {
-        $resultado = "Alto";
+        $resultado = 'Bajo';
+    } elseif ($num >= 40 && $num <= 70) {
+        $resultado = 'Medio';
+    } elseif($num >= 71 && $num <= 100) {
+        $resultado = 'Alto';
     }
     return $resultado;
 }
-function generaCodigo($num): string
+
+// Funcion para el codigo
+
+function codigo($num): string
 {
     $resultado = "";
     if ($num >= 0 && $num <= 39) {
-        $resultado = "Ba-" . $num;
-    } elseif ($num >= 40 && $num <= 69) {
-        $resultado = "Me-" . $num;
-    } elseif ($num >= 70 && $num <= 100) {
-        $resultado = "Al-" . $num;
+        $resultado = 'Ba-' . $num;
+    } elseif ($num >= 40 && $num <= 70) {
+        $resultado = 'Me-' . $num;
+    } elseif($num >= 71 && $num <= 100) {
+        $resultado = 'Al-' . $num;
     }
     return $resultado;
 }
-function cuentaRangoBajo($num): int
-{
-    $resultado =0;
+// Funcion para asignar el color segun la categoria
+function cuentaRango($num):array{
+    $resultado = [];
     if ($num >= 0 && $num <= 39) {
-        $resultado ++;
-    } 
+        $resultado[]= array_push($resultado,$num);
+    }else{}
     return $resultado;
+
+
 }

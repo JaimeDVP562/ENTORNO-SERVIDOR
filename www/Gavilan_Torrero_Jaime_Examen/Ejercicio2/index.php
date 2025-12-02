@@ -1,7 +1,6 @@
 <?php
 session_start();
 $numeroSecreto = 2;
-
 $contador = 0;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
